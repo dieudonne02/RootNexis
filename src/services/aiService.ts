@@ -28,6 +28,8 @@ class AIService {
     }
 
     console.log("Making OpenRouter API call directly with messages:", messages);
+    console.log("🔑 API Key:", this.config.apiKey.substring(0, 10) + "...");
+    console.log("📝 Model:", this.config.model);
 
     try {
       // Call OpenRouter API directly
@@ -36,7 +38,7 @@ class AIService {
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${this.config.apiKey}`,
-          "HTTP-Referer": "http://localhost:8081",
+          "HTTP-Referer": "http://localhost:8080",
           "X-Title": "RootNexis Chatbot",
         },
         body: JSON.stringify({
@@ -47,19 +49,22 @@ class AIService {
         }),
       });
 
-      console.log("OpenRouter API response status:", response.status);
+      console.log("📡 OpenRouter API response status:", response.status);
+      console.log("📋 Response headers:", Object.fromEntries(response.headers.entries()));
 
       if (!response.ok) {
         const error = await response.json();
-        console.error("OpenRouter API error:", error);
+        console.error("❌ OpenRouter API error:", error);
         throw new Error(error.error?.message || error.error || "Failed to generate response");
       }
 
       const data = await response.json();
-      console.log("OpenRouter API success:", data);
+      console.log("✅ OpenRouter API success:", data);
+      console.log("💬 Response content:", data.choices[0]?.message?.content);
       return data.choices[0].message.content;
     } catch (error) {
-      console.error("AI Service Error:", error);
+      console.error("🔥 AI Service Error:", error);
+      console.error("🔥 Error stack:", error.stack);
       throw error;
     }
   }

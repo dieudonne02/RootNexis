@@ -65,7 +65,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8 mt-16">
             <Sparkles size={14} className="text-primary" />
             <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-              🚀 Exclusive Opportunities Available — Launch With RootNexis
+              Exclusive Opportunities Available — Launch With RootNexis
             </span>
           </div>
 
@@ -83,20 +83,14 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#contact"
+              href="/about"
               className="btn-primary-glow px-8 py-4 rounded-xl text-base font-semibold inline-flex items-center gap-2 group"
             >
-              🚀 Launch Your Dream Project
+              About Us
               <ArrowRight
                 size={18}
                 className="group-hover:translate-x-1 transition-transform"
               />
-            </a>
-            <a
-              href="#portfolio"
-              className="px-8 py-4 rounded-xl text-base font-semibold border border-border bg-secondary/30 text-foreground hover:bg-secondary/60 transition-all inline-flex items-center gap-2"
-            >
-              View Our Work
             </a>
           </div>
         </motion.div>

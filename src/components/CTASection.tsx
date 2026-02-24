@@ -34,7 +34,7 @@ const CTASection = () => (
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="mailto:hello@rootnexis.com"
+              href="/contact"
               className="btn-primary-glow px-8 py-4 rounded-xl text-base font-semibold inline-flex items-center gap-2 group"
             >
               Book a Call
@@ -44,10 +44,10 @@ const CTASection = () => (
               />
             </a>
             <a
-              href="mailto:hello@rootnexis.com"
+              href="/portfolio"
               className="text-muted-foreground hover:text-foreground transition-colors text-sm"
             >
-              hello@rootnexis.com
+              View Our Work
             </a>
           </div>
         </div>
