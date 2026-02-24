@@ -71,7 +71,7 @@ const Chatbot = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [config, setConfig] = useState<ChatbotConfig>({
-    apiKey: "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",
+    apiKey: "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",
     model: "openai/gpt-4o-mini",
     systemPrompt: `You are RootNexis AI, a charismatic and highly intelligent AI assistant for RootNexis - a cutting-edge digital agency based in Kigali, Rwanda. You represent the company with expertise in web development, UI/UX design, AI automation, and creating stunning digital experiences.
 

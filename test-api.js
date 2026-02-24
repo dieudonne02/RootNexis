@@ -1,11 +1,13 @@
 // Test OpenRouter API
+const API_KEY = "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";
+
 const testAPI = async () => {
   try {
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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',
+        'Authorization': `Bearer ${API_KEY}`,
         'HTTP-Referer': 'http://localhost:8080',
         'X-Title': 'RootNexis Chatbot',
       },
