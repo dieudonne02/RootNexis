@@ -5,12 +5,62 @@ import emailjs from "@emailjs/browser";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Chatbot from "../components/Chatbot";
+import SEO from "../components/SEO";
 
 const Contact = () => {
-  const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
-  
+  const form = useRef<HTMLFormElement>(null);
+
+  const contactStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact RootNexis - Get in Touch for Web Development & Digital Solutions",
+    "description": "Contact RootNexis for web development, UI/UX design, AI automation, and branding services in Kigali, Rwanda. Get a free consultation for your digital project.",
+    "url": "https://rootnexis.com/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "RootNexis",
+      "url": "https://rootnexis.com",
+      "logo": "https://rootnexis.com/logoRN.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kigali",
+        "addressCountry": "Rwanda"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+250725064686",
+          "contactType": "customer service",
+          "email": "rootnexis@gmail.com",
+          "availableLanguage": ["English"],
+          "areaServed": "Rwanda",
+          "availableChannel": {
+            "@type": "WebsiteContactPoint",
+            "url": "https://rootnexis.com/contact"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "url": "https://wa.me/+250725064686",
+          "availableLanguage": ["English"],
+          "serviceType": "WhatsApp Support"
+        }
+      ],
+      "services": [
+        "Web Development",
+        "UI/UX Design",
+        "AI Automation",
+        "Digital Strategy",
+        "Branding",
+        "Mobile App Development",
+        "SEO Optimization"
+      ]
+    }
+  };
+
   const contactInfo = [
     {
       icon: Mail,
@@ -74,6 +124,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Contact RootNexis - Web Development & Digital Solutions in Kigali, Rwanda"
+        description="Contact RootNexis for web development, UI/UX design, AI automation, and branding services in Kigali, Rwanda. Get a free consultation for your digital project."
+        keywords="contact RootNexis, web development Rwanda, UI UX design Kigali, AI automation Africa, digital agency contact, React development consultation, Next.js projects, branding services Rwanda, mobile app development, SEO optimization, chatbot development"
+        structuredData={contactStructuredData}
+      />
       <Navbar />
       
       {/* Hero Section */}

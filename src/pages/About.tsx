@@ -3,10 +3,60 @@ import { Target, Eye, Heart, Shield, Users, Zap } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Chatbot from "../components/Chatbot";
+import SEO from "../components/SEO";
 
 const About = () => {
+  const aboutStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About RootNexis - Our Mission, Vision & Values",
+    "description": "Learn about RootNexis - a leading digital agency in Kigali, Rwanda. Our mission is to empower businesses with innovative digital solutions. Our vision is to bridge technology and creativity.",
+    "url": "https://rootnexis.com/about",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "RootNexis",
+      "url": "https://rootnexis.com",
+      "logo": "https://rootnexis.com/logoRN.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kigali",
+        "addressCountry": "Rwanda"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+250725064686",
+        "contactType": "customer service",
+        "email": "rootnexis@gmail.com",
+        "availableLanguage": ["English"]
+      },
+      "mission": "To empower businesses with innovative digital solutions that drive growth, enhance user experiences, and create lasting impact in the digital landscape.",
+      "vision": "To be the leading digital agency that bridges the gap between technology and human creativity, setting new standards for digital excellence.",
+      "values": [
+        "Passion: We love what we do and pour our hearts into every project",
+        "Integrity: We operate with transparency, honesty, and ethical practices",
+        "Collaboration: We believe in the power of partnership with clients",
+        "Innovation: We stay ahead of digital trends with cutting-edge solutions"
+      ],
+      "services": [
+        "Web Development",
+        "UI/UX Design", 
+        "AI Automation",
+        "Digital Strategy",
+        "Branding",
+        "Mobile App Development",
+        "SEO Optimization"
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="About RootNexis - Our Mission, Vision & Values | Digital Agency in Kigali, Rwanda"
+        description="Learn about RootNexis - a leading digital agency in Kigali, Rwanda. Our mission is to empower businesses with innovative digital solutions. Our vision is to bridge technology and creativity."
+        keywords="about RootNexis, digital agency mission, web development vision, UI UX design values, AI automation company, Rwanda tech company, Kigali digital agency, RootNexis story"
+        structuredData={aboutStructuredData}
+      />
       <Navbar />
       
       {/* Hero Section */}
