@@ -71,7 +71,7 @@ const Chatbot = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [config, setConfig] = useState<ChatbotConfig>({
-    apiKey: "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",
+    apiKey: "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",
     model: "openai/gpt-4o-mini",
     systemPrompt: `You are RootNexis AI, a charismatic and highly intelligent AI assistant for RootNexis - a cutting-edge digital agency based in Kigali, Rwanda. You represent the company with expertise in web development, UI/UX design, AI automation, and creating stunning digital experiences.
 
@@ -132,10 +132,8 @@ Always be helpful, professional, and guide users toward RootNexis services. When
 
   useEffect(() => {
     if (config.apiKey) {
-      console.log("🔑 Initializing AI Service with API Key:", config.apiKey.substring(0, 10) + "...");
       const service = new AIService({ apiKey: config.apiKey, ...config });
       setAiService(service);
-      console.log("✅ AI Service initialized successfully");
 
       // Inject custom scrollbar styles
       const styleElement = document.createElement('style');
@@ -148,8 +146,6 @@ Always be helpful, professional, and guide users toward RootNexis services. When
           styleElement.parentNode.removeChild(styleElement);
         }
       };
-    } else {
-      console.log("❌ No API key found in config");
     }
   }, [config]);
 
@@ -165,7 +161,6 @@ Always be helpful, professional, and guide users toward RootNexis services. When
     console.log("🎯 generateResponse called with:", userMessage);
     console.log("🤖 AI Service exists:", !!aiService);
     console.log("🔑 API Key exists:", !!config.apiKey);
-    console.log("🔑 Current API Key:", config.apiKey?.substring(0, 10) + "...");
     
     if (aiService && config.apiKey) {
       console.log("Using OpenRouter API...");
@@ -179,18 +174,6 @@ Always be helpful, professional, and guide users toward RootNexis services. When
         return response;
       } catch (error) {
         console.error("❌ OpenRouter API Error:", error);
-        console.error("❌ Full error details:", JSON.stringify(error, null, 2));
-        
-        // Check if it's an authentication error
-        if (error.message.includes('401') || error.message.includes('User not found') || error.message.includes('Invalid API key')) {
-          return "I apologize, but there's an issue with the OpenRouter API configuration. The API key appears to be invalid. Please check the API key in the chatbot configuration. In the meantime, I can help you with general questions about RootNexis services! What would you like to know about our web development, design, or AI automation services?";
-        }
-        
-        // For other errors, try to get more specific info
-        if (error.message.includes('CORS') || error.message.includes('fetch')) {
-          return "I'm having trouble connecting to the OpenRouter API due to network restrictions. This might happen in some browser environments. I can still help you with information about RootNexis services! What would you like to know?";
-        }
-        
         console.log("🔄 Falling back to demo service...");
         // Fallback to free service
         const demoService = new AIService({ apiKey: "" });
@@ -502,7 +485,7 @@ Always be helpful, professional, and guide users toward RootNexis services. When
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Ask about RootNexis services, web development, or digital transformation! 🚀"
+                  placeholder="Ask me anything about creating amazing digital experiences! ✨"
                   className="flex-1 px-4 py-3 bg-secondary border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   disabled={isTyping}
                 />
