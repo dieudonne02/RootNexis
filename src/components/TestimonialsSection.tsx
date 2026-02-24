@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Sarah Mitchell",
     role: "CEO, TechNova",
-    text: "RootNexis completely transformed our online presence. The website they built increased our conversion rate by 340% in just three months.",
+    text: "completely transformed our online presence. The website they built increased our conversion rate by 340% in just three months.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
   },
   {

@@ -28,31 +28,38 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-semibold text-sm mb-4">Services</h4>
           <ul className="space-y-2">
-            {["Web Development", "UI/UX Design", "AI Automation", "Branding"].map(
-              (s) => (
-                <li key={s}>
-                  <a
-                    href="#services"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {s}
-                  </a>
-                </li>
-              )
-            )}
+            {[
+              { name: "Web Development", href: "/services" },
+              { name: "UI/UX Design", href: "/services" },
+              { name: "AI Automation", href: "/services" },
+              { name: "Branding", href: "/services" }
+            ].map((service) => (
+              <li key={service.name}>
+                <a
+                  href={service.href}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {service.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
           <h4 className="font-display font-semibold text-sm mb-4">Company</h4>
           <ul className="space-y-2">
-            {["About", "Portfolio", "Contact"].map((s) => (
-              <li key={s}>
+            {[
+              { name: "About", href: "/about" },
+              { name: "Portfolio", href: "/portfolio" },
+              { name: "Contact", href: "/contact" }
+            ].map((page) => (
+              <li key={page.name}>
                 <a
-                  href={`#${s.toLowerCase()}`}
+                  href={page.href}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  {s}
+                  {page.name}
                 </a>
               </li>
             ))}

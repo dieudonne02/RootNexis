@@ -15,8 +15,8 @@ const SEO = ({
   title = 'RootNexis — Transform Ideas Into Digital Reality | Web Development & AI Solutions in Kigali, Rwanda',
   description = 'RootNexis is a leading digital agency in Kigali, Rwanda specializing in web development, UI/UX design, AI automation, and branding. Transform your vision into high-performance digital products.',
   keywords = 'web development Kigali Rwanda, UI UX design Rwanda, AI automation Africa, digital agency Rwanda, React development, Next.js apps, branding services, mobile app development, SEO optimization, chatbot development, RootNexis, Rwanda tech company',
-  image = 'https://rootnexis.com/og-image.jpg',
-  url = 'https://rootnexis.com',
+  image = '/og-image.jpg',
+  url = '',
   type = 'website',
   structuredData
 }: SEOProps) => {
@@ -27,8 +27,7 @@ const SEO = ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "RootNexis",
-    "url": url,
-    "logo": "https://rootnexis.com/logoRN.png",
+    "logo": "/logoRN.png",
     "description": description,
     "address": {
       "@type": "PostalAddress",

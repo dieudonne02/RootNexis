@@ -11,12 +11,11 @@ const About = () => {
     "@type": "AboutPage",
     "name": "About RootNexis - Our Mission, Vision & Values",
     "description": "Learn about RootNexis - a leading digital agency in Kigali, Rwanda. Our mission is to empower businesses with innovative digital solutions. Our vision is to bridge technology and creativity.",
-    "url": "https://rootnexis.com/about",
+    "url": "/about",
     "mainEntity": {
       "@type": "Organization",
       "name": "RootNexis",
-      "url": "https://rootnexis.com",
-      "logo": "https://rootnexis.com/logoRN.png",
+      "logo": "/logoRN.png",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kigali",

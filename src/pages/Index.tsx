@@ -10,18 +10,16 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "RootNexis",
-    "url": "https://rootnexis.com",
     "description": "RootNexis is a leading digital agency in Kigali, Rwanda specializing in web development, UI/UX design, AI automation, and branding.",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://rootnexis.com/search?q={search_term_string}",
+      "target": "/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "mainEntity": {
       "@type": "Organization",
       "name": "RootNexis",
-      "url": "https://rootnexis.com",
-      "logo": "https://rootnexis.com/logoRN.png",
+      "logo": "/logoRN.png",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kigali",

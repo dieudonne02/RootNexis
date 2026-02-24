@@ -17,12 +17,11 @@ const Contact = () => {
     "@type": "ContactPage",
     "name": "Contact RootNexis - Get in Touch for Web Development & Digital Solutions",
     "description": "Contact RootNexis for web development, UI/UX design, AI automation, and branding services in Kigali, Rwanda. Get a free consultation for your digital project.",
-    "url": "https://rootnexis.com/contact",
+    "url": "/contact",
     "mainEntity": {
       "@type": "Organization",
       "name": "RootNexis",
-      "url": "https://rootnexis.com",
-      "logo": "https://rootnexis.com/logoRN.png",
+      "logo": "/logoRN.png",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kigali",
@@ -38,7 +37,7 @@ const Contact = () => {
           "areaServed": "Rwanda",
           "availableChannel": {
             "@type": "WebsiteContactPoint",
-            "url": "https://rootnexis.com/contact"
+            "url": "/contact"
           }
         },
         {
