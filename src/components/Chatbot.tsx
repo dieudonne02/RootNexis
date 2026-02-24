@@ -485,7 +485,7 @@ Always be helpful, professional, and guide users toward RootNexis services. When
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Ask me anything about creating amazing digital experiences! ✨"
+                  placeholder="Ask about RootNexis services, web development, or digital transformation! 🚀"
                   className="flex-1 px-4 py-3 bg-secondary border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   disabled={isTyping}
                 />

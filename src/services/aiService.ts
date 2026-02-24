@@ -82,12 +82,16 @@ class AIService {
     
     // Simple keyword-based responses for demo
     const keywords = {
-      "web development": "We specialize in modern web development using React, TypeScript, and cutting-edge frameworks. Our team builds scalable, performant applications tailored to your needs.",
-      "design": "Our design team creates stunning UI/UX experiences that are both beautiful and functional. We follow the latest design trends and best practices.",
-      "price": "Our pricing is project-based and varies depending on scope and complexity. We offer competitive rates and flexible payment options. Contact us for a custom quote!",
-      "contact": "You can reach us through the contact form on this website, or email us directly at hello@pixelperfectstudio.com. We typically respond within 24 hours.",
-      "portfolio": "Check out our portfolio section to see examples of our work. We've helped businesses across various industries achieve their digital goals.",
-      "ai": "We offer AI automation services including chatbots, data analysis, machine learning models, and intelligent workflow automation to streamline your business processes.",
+      "web development": "At RootNexis, we specialize in modern web development using React, TypeScript, and cutting-edge frameworks. Our team builds scalable, performant applications tailored to your business needs in Kigali and beyond.",
+      "design": "Our design team creates stunning UI/UX experiences that are both beautiful and functional. We follow the latest design trends and best practices to make your brand unforgettable.",
+      "price": "Our pricing is project-based and varies depending on scope and complexity. We offer competitive rates and flexible payment options including 50% upfront and 50% on completion. Contact us for a custom quote!",
+      "contact": "You can reach RootNexis through our contact form, email us at rootnexis@gmail.com, call +250 725 064 686, or WhatsApp us at https://wa.me/+250725064686. We typically respond within 24 hours!",
+      "portfolio": "Check out our portfolio section to see examples of our work. We've helped businesses across various industries achieve their digital goals with stunning websites and applications.",
+      "ai": "RootNexis offers AI automation services including chatbots, data analysis, machine learning models, and intelligent workflow automation to streamline your business processes and boost efficiency.",
+      "about": "RootNexis is a cutting-edge digital agency based in Kigali, Rwanda. Our mission is to empower businesses with innovative digital solutions that drive growth and enhance user experiences.",
+      "mission": "Our mission at RootNexis is to empower businesses with innovative digital solutions that drive growth, enhance user experiences, and create lasting impact in the digital landscape.",
+      "vision": "Our vision is to be the leading digital agency that bridges the gap between technology and human creativity, setting new standards for digital excellence in Africa and beyond.",
+      "services": "RootNexis offers comprehensive digital services: Web Development, UI/UX Design, AI Automation, Digital Strategy, and Branding. Each service is tailored to meet your specific business needs.",
     };
 
     for (const [keyword, response] of Object.entries(keywords)) {
@@ -98,10 +102,11 @@ class AIService {
 
     // Default responses
     const defaultResponses = [
-      "Thank you for your message! Our team would be happy to help with your project. We specialize in creating amazing digital experiences.",
-      "That's interesting! We'd love to learn more about your requirements. Feel free to share more details about what you're looking for.",
-      "Great question! We offer comprehensive digital solutions including web development, design, and AI automation. What specific service interests you most?",
-      "We appreciate you reaching out! Our team is experienced in delivering high-quality digital solutions. How can we assist you today?",
+      "Thank you for your message! RootNexis would be happy to help with your digital project. We specialize in creating amazing web experiences right here in Kigali! 🇷🇼",
+      "That's interesting! We'd love to learn more about your requirements. Feel free to share more details about how RootNexis can transform your digital presence.",
+      "Great question! RootNexis offers comprehensive digital solutions including web development, UI/UX design, and AI automation. What specific service interests you most?",
+      "We appreciate you reaching out to RootNexis! Our team is experienced in delivering high-quality digital solutions. How can we assist your business today?",
+      "Hello! I'm RootNexis AI, your digital transformation partner. I can help you learn about our services, discuss your project needs, or answer any questions about web development and design! 🚀",
     ];
 
     return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
