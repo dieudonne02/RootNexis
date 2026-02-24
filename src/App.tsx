@@ -5,13 +5,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
-import Home from "./pages/Index";
-import Services from "./pages/Services";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import LoadingSpinner from "./components/LoadingSpinner";
+import Home from "pages/Index";
+import Services from "pages/Services";
+import Portfolio from "pages/Portfolio";
+import Contact from "pages/Contact";
+import About from "pages/About";
+import NotFound from "pages/NotFound";
+import LoadingSpinner from "components/LoadingSpinner";
 
 const queryClient = new QueryClient();
 
