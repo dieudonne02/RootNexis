@@ -38,7 +38,7 @@ class AIService {
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${this.config.apiKey}`,
-          "HTTP-Referer": "http://localhost:8080",
+          "HTTP-Referer": typeof window !== 'undefined' ? window.location.origin : "https://rootnexis.github.io",
           "X-Title": "RootNexis Chatbot",
         },
         body: JSON.stringify({
