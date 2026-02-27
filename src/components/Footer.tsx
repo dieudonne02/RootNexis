@@ -13,15 +13,32 @@ const Footer = () => (
             AI automation. Turning ideas into high-performing digital products.
           </p>
           <div className="flex gap-4 mt-5">
-            {[Github, Twitter, Linkedin, Instagram].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-              >
-                <Icon size={16} />
-              </a>
-            ))}
+            <a
+              href="https://github.com/rootnexis/RootNexis"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+            >
+              <Github size={16} />
+            </a>
+            <a
+              href="#"
+              className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+            >
+              <Twitter size={16} />
+            </a>
+            <a
+              href="#"
+              className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+            >
+              <Linkedin size={16} />
+            </a>
+            <a
+              href="#"
+              className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+            >
+              <Instagram size={16} />
+            </a>
           </div>
         </div>
 
